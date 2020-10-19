@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Electrolize';
+    src : url('Electrolize.eot') format('eot'),
+          url('Electrolize.woff') format('woff'),
+          url('Electrolize.ttf') format('ttf'),
+          url('Electrolize.svg') format('svg');
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src : url('Russo One.eot') format('eot'),
+          url('Russo One.woff') format('woff'),
+          url('Russo One.ttf') format('ttf'),
+          url('Russo One.svg') format('svg');
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Electrolize, 'Trebuchet MS', Arial, Helvetica, sans-serif; 
+	background: #fdfdfd;
+
+}
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}	
+#logo {
+	width: 500px;
+	margin-top: 30px;
+	margin: auto;
+	align-items: center;
+}
+h1 {
+	font-size: 1.1em;	
+	text-align: center;
+}
+nav {
+	display: flex;
+	margin: auto;
+	justify-content: space-around;
+	width: 25%;
+	align-items: center;
+}
+nav a {
+	text-decoration: none;
+	color: #CC8E13;
+	font-weight: bolder;
+	font-size: 1.2em;
+}
+nav a:hover {
+	opacity: 0.5;
+}
+.categories {
+	width: 75%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 85px;
+	margin-top: 70px;
+}
+#bands {
+	 background-image: url("img/bestofbandsgrey.jpg");	
+	 border-radius: 15px;
+}
+#tvshows {
+	background-image: url("img/bestoftvshowsgrey.jpg");	
+	border-radius: 15px;	
+}
+
+#mashups {
+	background-image: url("img/bestofmashupsgrey.jpg");	
+	border-radius: 15px;	
+}
+#bands, #tvshows, #mashups {
+	width: 250px;
+	height: 250px;
+	background-size: contain;
+	display: flex;
+	box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2)
+	
+}
+#bands h2, #tvshows h2, #mashups h2 {
+	margin: auto;
+	font-family: 'Russo One';
+	font-size: 2em;
+	text-align: center;
+
+}
+#bands a, #tvshows a, #mashups a {
+	text-decoration: none;
+	color: #CC8E13;
+	
+
+}
+#bands:hover {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	background-image: url("img/bestofbands.jpg");
+
+}
+#tvshows:hover {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	background-image: url("img/bestoftvshows.jpg");
+	
+}
+#mashups:hover {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	background-image: url("img/bestofmashups.jpg");
+	
+}
+#bands a:hover, #tvshows a:hover, #movies a:hover, #mashups a:hover {	
+	
+	font-size: 1.2em;
+	color: white;
+
+	
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+}
+#mentions {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+#mentions i {
+	margin-right: 5px;	
+}
+#contacts {
+	text-align: center;
+	font-size: 1.3em;
+
+	
+	
+}
+#contacts i {
+	color: #CC8E13;
+	margin-right: 10px;
+	font-size: 1.5em;
+	margin: 0 10px 0 10px;
+}
+#linkedin:hover {
+	color: #0e76a8;
+}
+#twitter:hover {
+	color: #00acee;
+}
+#insta:hover {
+	background: -webkit-linear-gradient(0.75turn, #833AB4, #FCAF45);
+  				-webkit-background-clip: text;
+  				-webkit-text-fill-color: transparent;
+}
+/* ligthbox*/
+.grid {
+	display: grid;	
+	grid-template-columns: repeat(6, 200px);
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	height: auto;
+	margin-top: 50px;
+	
+}
+.grid img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+img {
+  cursor: pointer;
+}
+.grid h2 {
+	font-size: 1.75em;
+}
+.grid h3 {
+	font-size: 1.25em;
+}
+
+#lightbox {
+  position:fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: none;
+}
+#lightbox.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 12px;
+  background-color: white;
+  border: 8px solid black;
+}
+.desc {
+	text-align: left;
+}
+.fas {
+	font-size: 1.8em;
+	font-weight: lighter;
+	color: #CC8E13;
+
+}
+.grid span {
+	color: red;
+}
+
+
+@media screen and (max-width: 1200px) {	
+	.grid {	
+		grid-template-columns: repeat(4, 200px);		
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.categories {
+		width: 90%;
+	}	
+}
+@media screen and (max-width: 768px) {
+	#bands, #tvshows, #mashups {
+		width: 175px;
+		height: 175px;		
+	}
+	nav {		
+		width: 60%;
+	}
+	.grid {
+	grid-template-columns: repeat(4, 150px);
+	}
+	.grid img {
+	width: 150px;
+	height: 150px;
+}
+.grid h2 {
+	font-size: 1.2em;
+}
+.grid h3 {
+	font-size: 1em;
+}
+}
+@media screen and (max-width: 550px) {
+		#logo {
+		width: 350px;		
+	}
+	
+	.categories {
+		display: flex;		
+		flex-direction: column;	
+		align-items: center;
+
+	}
+	#bands, #tvshows, #mashups {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		width: 220px;
+		height: 220px;		
+	}
+	.grid {		
+		grid-template-columns: 1fr 1fr;
+		margin-left: 25px;
+		}
+
+	.grid img {		
+		width: 220px;
+		height: 220px;
+	}
+	
+}
