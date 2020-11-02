@@ -52,12 +52,13 @@ nav a:hover {
 	opacity: 0.5;
 }
 .categories {
-	width: 75%;
+	width: 80%;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 85px;
 	margin-top: 70px;
+	flex-wrap: wrap;
 }
 #bands {
 	 background-image: url("img/bestofbandsgrey.jpg");	
@@ -72,22 +73,30 @@ nav a:hover {
 	background-image: url("img/bestofmashupsgrey.jpg");	
 	border-radius: 15px;	
 }
-#bands, #tvshows, #mashups {
+#comics {
+	background-image: url("img/bestofcomicsgrey.jpg");	
+	border-radius: 15px;
+
+}
+#bands, #tvshows, #mashups, #comics {
 	width: 250px;
 	height: 250px;
 	background-size: contain;
 	display: flex;
-	box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2)
+	box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
+	margin: 25px;
+
 	
 }
-#bands h2, #tvshows h2, #mashups h2 {
+#bands h2, #tvshows h2, #mashups h2, #comics h2 {
+
 	margin: auto;
 	font-family: 'Russo One';
 	font-size: 2em;
 	text-align: center;
 
 }
-#bands a, #tvshows a, #mashups a {
+#bands a, #tvshows a, #mashups a, #comics a {
 	text-decoration: none;
 	color: #CC8E13;
 	
@@ -114,7 +123,14 @@ nav a:hover {
 	background-image: url("img/bestofmashups.jpg");
 	
 }
-#bands a:hover, #tvshows a:hover, #movies a:hover, #mashups a:hover {	
+#comics:hover {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	background-image: url("img/bestofcomics.jpg");
+	
+}
+#bands a:hover, #tvshows a:hover, #movies a:hover, #mashups a:hover, #comics a:hover {	
 	
 	font-size: 1.2em;
 	color: white;
@@ -219,21 +235,48 @@ img {
 .grid span {
 	color: red;
 }
+#faqsection, #aboutsection {
+	width: 50%;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: justify;
+}
+#aboutsection a {
+	text-decoration: none;
+	color: #CC8E13;
+}
+#faqsection h2 {
+	font-size: 1.4em;
+	text-align: center;
+	margin-bottom: 25px;
+}
+.questions {
+	font-weight: bold;
+}
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1200px) {	
 	.grid {	
 		grid-template-columns: repeat(4, 200px);		
 	}
+	.categories {
+		width: 95%;
+	}	
+
 }
 
 @media screen and (max-width: 1024px) {
-	.categories {
-		width: 90%;
-	}	
+	
 }
 @media screen and (max-width: 768px) {
-	#bands, #tvshows, #mashups {
+	#bands, #tvshows, #mashups, #comics {
 		width: 175px;
 		height: 175px;		
 	}
@@ -246,17 +289,22 @@ img {
 	.grid img {
 	width: 150px;
 	height: 150px;
-}
-.grid h2 {
-	font-size: 1.2em;
-}
-.grid h3 {
+	}
+	.grid h2 {
+		font-size: 1.2em;
+	}
+	.grid h3 {
 	font-size: 1em;
-}
+	}
+	#faqsection {
+		width: 75%;
+	}
 }
 @media screen and (max-width: 550px) {
 		#logo {
-		width: 350px;		
+		width: 285px;
+
+
 	}
 	
 	.categories {
@@ -265,7 +313,7 @@ img {
 		align-items: center;
 
 	}
-	#bands, #tvshows, #mashups {
+	#bands, #tvshows, #mashups, #comics {
 		margin-top: 15px;
 		margin-bottom: 15px;
 		width: 220px;
@@ -282,3 +330,4 @@ img {
 	}
 	
 }
+
