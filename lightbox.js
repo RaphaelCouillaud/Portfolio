@@ -20,3 +20,24 @@ lightbox.addEventListener('click', e => {
 	lightbox.classList.remove('active')
 })
 
+
+//INTERSECTION OBSERVER//
+const ratio = 0.1
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: ratio
+}
+const handleIntersect = function (entries, observer) {
+	entries.forEach(function (entry) {
+		if (entry.intersectionRatio > ratio) {
+			entry.target.classList.add('reveal-visible')
+			observer.unobserve(entry.target)			
+		}
+		})
+}
+const observerIntersect = new IntersectionObserver(handleIntersect, options);
+document.querySelectorAll('[class*="reveal-"]').forEach(function (revealTitle) {
+	observerIntersect.observe(revealTitle)
+})
+///////////////////////////////////////////////////////////////
